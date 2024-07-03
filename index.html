@@ -45,9 +45,37 @@
             <h2 align="center"><strong>Formulario</strong> </h2>
             <!-- Crear el Formulario, la action es lo que se donde se almacenará la información que están emitiendo-->
                 <Form action="/enviar-respuesta ">
-                    <!-- Campo para que el usuario ingrese un texto-->
+                    <!-- Crea la opción de seleccionar hombre y mujer-->
+                     <!-- El comando label sirve para que se pueda selecccionar la alternativa no solo tocando el botón, 
+                      sino también la palabra-->
+                      <!--El comando name="interior-exterior" lo que hizo, fue agrupar las alternativas para que sólo se
+                       pudiera seleccionar una de ese grupo-->
+                    <P>¿Cuál es tu sexo?</P>   
+                     <label for ="interior"><input id ="interior" type="radio" value="Interior" name="interior-exterior">Hombre</label>
+                     <!-- el br se utiliza para hacer un salto de línea-->
+                     <br>
+                     <label for ="exterior"><input id ="exterior" type="radio" value="Exterior" name="interior-exterior">Mujer</label>
+                    <!-- el br se utiliza para hacer un salto de línea-->
+                     <br>
+                     <!-- CASILLAS DE VERIFICACIÓN-->
+                      <P>¿Con quién quieres utilizar esta aplicación?</P>
+                      <label for ="Amigos">
+                        <input id="Amigos" type="checkbox"  
+                        value="Amigos" 
+                        name="Para que">Amigos</label><br>
+                      <label for ="Pareja">
+                        <input id="Pareja" type="checkbox"  
+                        value="Pareja" 
+                        name="Para que">Pareja</label><br>
+                      <label for ="Familia">
+                        <input id="Familia" type="checkbox" 
+                        value="Familia" 
+                        name="Para que">Familia</label><br>
+                        <br>
+                     <!-- TEXTO Y BOTÓN ENVIAR-->
+                     <!-- Campo para que el usuario ingrese un texto-->
                      <!--placeholder sirve para indicar una frase de ayuda para el campo que se debe completar-->
-                     <input type="text" placeholder="Indica si eres hombre o mujer"> 
+                     <input type="text" placeholder="¿Alguna observación?" required> 
                      <!--Crear un botón con el texto "Enviar"-->
                      <button type="submit" >Enviar</button>
                     
